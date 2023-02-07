@@ -1,7 +1,0 @@
-Update List
-
-    =>Fix author tag
-    =>Fix category sidebar
-    =>fix all uncaught error
-    =>Add loader or top loader
-    =>Add category state
