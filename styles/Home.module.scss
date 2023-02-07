@@ -1,0 +1,274 @@
+
+.container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+    
+
+}
+.navbar {
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background-color:rgba(3, 28, 41, 0.826);
+  backdrop-filter: blur(5px);
+  
+  z-index: 9999;
+  box-shadow: 0px 10px 18px -11px hsl(185, 86%, 14%);
+  h1 {
+    margin-top: 20px;
+    margin-left: 5px;
+    color: rgb(227, 227, 227);
+  }
+  .img {
+    margin-top: 10px;
+  }
+
+  .menubtn{
+    position: absolute;
+    left: 0;
+    top: 1rem;
+    margin-left: 15px;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #c9c6c6;
+  }
+  .closebtn{
+    position: absolute;
+    top: 1.3rem;
+    left: 12rem;
+    font-size: 2rem;
+    cursor: pointer;
+
+  }
+  
+  .sidebar{
+    width: 15rem;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: -100%;
+    background-color:rgba(3, 28, 41, 0.826);
+    backdrop-filter: blur(5px);
+    color: white;
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 500ms;
+
+    h2{
+      text-align: center;
+    }
+    .categoryList{
+      margin-top: 2rem;
+      ul{
+        list-style: none;
+        padding: 0 15px;
+
+      }
+      li{
+        padding: 7px 15px;
+        margin: 10px 0 ;
+        border-radius: 5px;
+        cursor: pointer;
+        background-color:inherit;
+      }
+      li:hover{
+        background-color: rgba(49, 118, 153, 0.463);
+      }
+      
+
+
+
+
+
+
+    }
+  }
+  
+  
+  .show{
+    left: 0px;
+  }
+  .hide{
+   left: -100%;
+  }
+}
+
+.main {
+  min-height: 100vh;
+  padding: 4rem 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+ 
+  h2{
+    color: rgb(215, 209, 209);
+    
+  }
+
+ 
+   
+}
+
+
+.grid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 0.5rem;
+  
+   
+  
+}
+
+
+
+.card {
+  margin: 1rem;
+  padding: 0.5rem;
+  border-radius: 5px;
+  max-width: 70%;
+  display: flex;
+  box-shadow: 0px 0px 11px -1px rgba(0, 0, 0, 0.52);
+  border: 2px solid rgba(126, 124, 124, 0.284);
+  transition: box-shadow 0.25s ease;
+  position: relative;
+  background-color: #10101488;
+  color: #E5E1E1;
+  backdrop-filter: blur(5px);
+}
+.card:hover {
+  box-shadow: 0px 0px 11px -1px rgb(0, 0, 0);
+}
+
+.imgWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  img {
+    width: 320px !important;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 5px;
+  }
+}
+.infowrapper {
+  margin-left: 20px;
+  position: relative;
+
+  .author {
+    
+    font-size: 15px;
+    color: #878080;
+  }
+  .content {
+    margin: 0.5rem 0 1.5rem 0;
+    color: #c3bfbf;
+  }
+  .time {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    p {
+      color: #c9c6c6;
+
+      font-size: 1rem;
+    }
+    span {
+      display: flex;
+      align-items: center;
+      margin-right: 10px;
+    }
+    .img {
+      width: 25px;
+      height: auto;
+      margin-right: 5px;
+     
+    }
+  }
+  a {
+    cursor: pointer;
+    color: #878080;
+    transition: color 0.15s ease;
+  }
+  a:hover {
+    color: rgb(245, 152, 29);
+  }
+}
+
+.card h2 {
+  margin: 0 0 1rem 0;
+  font-size: 1.5rem;
+}
+
+.card p {
+  margin: 0;
+  font-size: 1.2rem;
+  color: rgb(63, 62, 62);
+  // line-height: 1.5;
+}
+
+.footer {
+  display: flex;
+  flex: 1;
+  padding: 2rem 0;
+  border-top: 1px solid #eaeaea;
+  justify-content: center;
+  align-items: center;
+}
+
+@media only screen and (max-width: 600px) {
+  .grid {
+    width: 100%;
+    flex-direction: column;
+  }
+}
+@media only screen and (max-width: 1250px) {
+  .card {
+    max-width: 90%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .card {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .imgWrapper {
+    img {
+      width: auto;
+    }
+  }
+}
+@media only screen and (max-width: 425px) {
+  
+  .imgWrapper {
+    img {
+      width: 300px;
+    }
+  }
+  .infowrapper {
+    margin: 0.5rem;
+  }
+}
+@media only screen and (max-width: 321px) {
+  .card {
+    max-width: 95%;
+    margin: 1rem 0;
+  }
+  .infowrapper {
+    margin: 0.5rem;
+  }
+  .imgWrapper {
+    img {
+      width: 280px;
+    }
+  }
+}
